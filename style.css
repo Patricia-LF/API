@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(rgb(0, 1, 70) 0.48%, 
+    rgb(19, 17, 28) 32.21%, 
+    rgb(44, 18, 99) 58.17%, 
+    rgb(13, 48, 91) 76.44%, 
+    rgb(11, 9, 21) 100%) no-repeat;
+    height: 100vw;
+}
+
+header {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(144, 179, 255, 0.144);
+}
+
+header h1 {
+    display: inline-block;
+    background: linear-gradient(to right, #3affff, #58a0ff, rgb(52, 52, 255), rgb(202, 0, 202));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 100px;
+    padding: 40px;
+    gap: 20px;
+    width: 100vw;
+    justify-self: center;
+}
+
+input#search {
+    height: 40px;
+    font-size: 1.2rem;
+    background:rgba(55, 0, 255, 0.208);
+    color: aqua;
+    border: aqua solid;
+    border-radius: 25px;
+    padding: 10px
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    background: rgba(55, 0, 255, 0.208);
+    color: aqua;
+    border: aqua solid;
+    border-radius: 25px;
+}
+
+div#results {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+div#results img {
+    border: aqua solid;
+}
+
+p {
+    font-size: 1rem;
+    color: #ffffff;
+}
