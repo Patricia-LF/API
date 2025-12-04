@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    
+    
+    <div id="show-details"></div>
+    
+    <div class="episodes-section">
+        <h2>Episodes</h2>
+        <div class="season-selector">
+            <select id="season-select" onchange="loadEpisodes()">
+                <option value="">Select a season...</option>
+            </select>
+        </div>
+        
+        <div id="episodes-list" class="episodes-list"></div>
+    </div>
+    
+    <script src="details.js"></script>
+</body>
+</html>

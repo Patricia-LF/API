@@ -1,25 +1,24 @@
 body {
-    background: linear-gradient(rgb(0, 1, 70) 0.48%, 
-    rgb(19, 17, 28) 32.21%, 
-    rgb(44, 18, 99) 58.17%, 
-    rgb(13, 48, 91) 76.44%, 
-    rgb(11, 9, 21) 100%) no-repeat;
-    height: 100vw;
+    background: #36014ddc;
+    background-image: url("images/trivia.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header {
-    position: absolute;
-    width: 100vw;
     display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: rgba(144, 179, 255, 0.144);
+    height: 80px;
+    background: #ffa4f830;
+    font-size: 1.5rem;
+    color: rgb(249 219 255);
 }
 
 header h1 {
-    display: inline-block;
-    background: linear-gradient(to right, #3affff, #58a0ff, rgb(52, 52, 255), rgb(202, 0, 202));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin: 0;
 }
 
 .search {
@@ -27,31 +26,77 @@ header h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 100px;
-    padding: 40px;
+    top: 50px;
+    padding-bottom: 40px;
     gap: 20px;
     width: 100vw;
     justify-self: center;
 }
 
 input#search {
-    height: 40px;
+    height: 60px;
     font-size: 1.2rem;
-    background:rgba(55, 0, 255, 0.208);
-    color: aqua;
-    border: aqua solid;
+    background:rgba(255, 255, 255, 0.208);
+    color: rgb(249 219 255);
+    border: rgb(249 219 255) solid;
     border-radius: 25px;
     padding: 10px
 }
 
-button {
-    width: 100px;
-    height: 40px;
-    font-size: 1.2rem;
-    background: rgba(55, 0, 255, 0.208);
-    color: aqua;
-    border: aqua solid;
+input#search::placeholder {
+    color: rgba(249, 219, 255, 0.6);
+}
+
+.filter-row {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+    
+    /* #genre-filter,
+    #country-filter,
+    button {
+        width: 90%;
+        max-width: 300px;
+    } */
+    
+#genre-filter,
+#country-filter {
+    height: 50px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.208);
+    color: rgb(249 219 255);
+    border: rgb(249 219 255) solid 2px;
     border-radius: 25px;
+    padding: 0 20px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+
+#genre-filter option,
+#country-filter option {
+    background: #36014d;
+    color: rgb(249 219 255);
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    font-size: 1rem;
+    border: rgb(249 219 255) solid;
+    border-radius: 25px;
+    background: transparent;
+    color: rgb(249 219 255);
+}
+
+button:hover {
+    box-shadow: 0 0 20px palevioletred;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
 }
 
 div#results {
@@ -59,20 +104,101 @@ div#results {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     width: 100%;
+    margin-top: 60px;
+}
+
+.show-card a {
+    text-decoration: none;
 }
 
 h3 {
-    font-size: 1.2rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    color: rgb(249 219 255);
+    margin-top: 0px;
 }
 
 div#results img {
-    border: aqua solid;
+    border:rgb(249 219 255) solid;
+    /* box-shadow: 6px 6px 10px palevioletred;
+    color: rgb(249 219 255); */
+}
+
+div#results img:hover {
+    border:rgb(249 219 255) solid;
+    box-shadow: 0 0 30px palevioletred;
+    color: rgb(249 219 255);
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.genre-tag,
+.country-tag {
+    font-size: 0.9rem;
+    color: rgba(249, 219, 255, 0.7);
+    text-align: center;
+    margin: 5px 0;
+    width: auto;
+}
+
+.country-tag {
+    font-size: 0.85rem;
+    color: rgba(249, 219, 255, 0.6);
+}
+
+.no-results,
+.error {
+    font-size: 1.3rem;
+    color: rgb(249 219 255);
+    text-align: center;
+    padding: 40px;
+    width: auto;
+}
+
+.no-image {
+    width: 100%;
+    /* max-width: 400px; */
+    height: 78%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(249, 219, 255, 0.507);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(249, 219, 255, 0.468);
 }
 
 p {
     font-size: 1rem;
-    color: #ffffff;
+    color: rgb(249 219 255);
+    width: 200px;
 }
+
+@media (min-width: 768px) {
+    header {
+        font-size: 2rem;
+    }
+
+    input#search {
+    width: 400px;
+    }
+
+    .filter-row {
+    flex-direction: row;
+    }
+
+    .search {
+        top: 100px;
+    }
+
+    .show-card {
+        width: 200px;
+    }
+
+    h3 {
+        margin-top: 10px;
+    }
+}
+
+

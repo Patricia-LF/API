@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #36014ddc;
+    background-image: url("images/trivia.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    background: #ffa4f830;
+    font-size: 1.2rem;
+    color: rgb(249 219 255);
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 5px;
+    font-size: 2rem;
+    color: rgb(249 219 255);
+}
+
+.back-btn {
+    height: 40px;
+    width: 150px;
+    font-size: 1rem;
+    border: rgb(249 219 255) solid;
+    border-radius: 25px;
+    background: transparent;
+    color: rgb(249 219 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    box-shadow: 0 0 20px palevioletred;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.show-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.show-info {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(249 219 255);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.show-container img {
+    max-width: 100%;
+    border: 2px solid rgb(249 219 255);
+    border-radius: 10px;
+}
+
+.summary-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.summary-info p {
+    line-height: 1.6;
+    color: rgb(249 219 255);
+    margin-bottom: 20px;
+}
+
+.details-info p {
+    line-height: 1.6;
+    color: rgb(249 219 255);
+}
+
+/*.show-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+/*.show-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: rgb(249 219 255);
+}
+
+.show-meta p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: rgb(249 219 255)
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}*/
+
+.episodes-section {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgb(249 219 255);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 auto;
+    width: 90vw;
+    margin-bottom: 20px;
+}
+
+.episodes-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(249 219 255);
+}
+
+.season-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: rgb(249 219 255);
+}
+
+#season-select {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.208);
+    color:rgb(249 219 255);
+    border: 2px solid rgb(249 219 255);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#season-select option {
+    background: rgb(19, 17, 28);
+    color:rgb(249 219 255);
+}
+
+.episodes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.episode-card {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgb(249 219 255);
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.episode-card:hover {
+    border-color:rgb(249 219 255);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.episode-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid rgb(249 219 255);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    max-width: 400px;
+    height: 112px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(249, 219, 255, 0.507);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(249, 219, 255, 0.468);
+}
+
+.episode-info {
+    flex: 1;
+}
+
+.episode-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: rgb(249 219 255);
+}
+
+.episode-meta {
+    font-size: 0.9rem;
+    color: rgb(249 219 255);
+    margin: 5px 0;
+}
+
+.episode-summary {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: rgb(249 219 255);
+}
+
+/* Responsiv design */
+@media (min-width: 768px) {
+    header h1 {
+    font-size: 2.5rem;
+    }
+    
+    .show-container {
+        max-width: 1200px;
+        flex-direction: row;
+    }
+    
+    .show-container img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+
+    .summary-info, .details-info {
+        width: 60%;
+    }
+
+    .episode-card {
+        flex-direction: row;
+    }
+
+    .episode-image {
+        width: 200px;
+    }
+
+    .no-image {
+      width: 200px;  
+    }
+}
