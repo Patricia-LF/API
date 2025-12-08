@@ -30,6 +30,44 @@ header h1 {
     margin: 0;
 }
 
+.intro {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.intro p {
+    width: 80vw;
+}
+
+.filter-row {
+    display: flex;
+    /* gap: 15px; */
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+    
+#genre-filter {
+    height: 50px;
+    font-size: 1rem;
+    font-family: var(--font);
+    background: #1f0f227a;
+    color: rgb(249 219 255);
+    border: rgb(249 219 255) solid 2px;
+    border-radius: 25px;
+    padding: 0 20px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+#genre-filter option {
+    background: #42234f;
+    color: rgb(249 219 255);
+    font-family: var(--font);
+}
+
 .search {
     position: relative;
     display: flex;
@@ -47,7 +85,7 @@ input#search {
     height: 60px;
     font-size: 1.2rem;
     font-family: var(--font);
-    background:rgba(255, 255, 255, 0.208);
+    background: #1f0f227a;
     color: rgb(249 219 255);
     border: rgb(249 219 255) solid;
     border-radius: 25px;
@@ -59,35 +97,6 @@ input#search::placeholder {
     font-family: var(--font);
 }
 
-.filter-row {
-    display: flex;
-    /* gap: 15px; */
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-    
-#genre-filter,
-#country-filter {
-    height: 50px;
-    font-size: 1rem;
-    font-family: var(--font);
-    background: rgba(255, 255, 255, 0.208);
-    color: rgb(249 219 255);
-    border: rgb(249 219 255) solid 2px;
-    border-radius: 25px;
-    padding: 0 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-#genre-filter option,
-#country-filter option {
-    background: #36014d;
-    color: rgb(249 219 255);
-    font-family: var(--font);
-}
-
 button {
     height: 40px;
     width: 100px;
@@ -95,7 +104,7 @@ button {
     font-family: var(--font);
     border: rgb(249 219 255) solid;
     border-radius: 25px;
-    background: transparent;
+    background: rgb(182, 110, 203);
     color: rgb(249 219 255);
 }
 
@@ -122,18 +131,23 @@ div#results {
     align-items: center;
     /* gap: 20px; */
     text-decoration: none;
+    border: rgb(249 219 255) solid;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px 0px peachpuff;
 }
 
 h3 {
     font-size: 1.2rem;
     font-family: var(--font);
     color: rgb(249 219 255);
-    margin-bottom: 10px;
+    margin: 10px 0px 0px;
     text-align: center;
 }
 
 div#results img {
     border:rgb(249 219 255) solid;
+    border-radius: 25px;
     /* box-shadow: 6px 6px 10px palevioletred;
     color: rgb(249 219 255); */
 }
@@ -233,6 +247,9 @@ footer {
 
     .show-card a {
         align-items: center;
+        border: none;
+        box-shadow: none;
+        padding: 0px;
     }
 
     .show-card a p {
@@ -241,9 +258,9 @@ footer {
         align-items: center;
     }
 
-    /* h3 {
-        text-align: left;
-    } */
+    h3 {
+        margin: 20px 0px 0px;
+    } 
 
     .genre-tag {
     text-align: center;
