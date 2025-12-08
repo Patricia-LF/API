@@ -1,0 +1,3 @@
+This is a website called Simply Series. It was made as an asignment, where we had to use a public API, and implement it with JavaScripts Fetch. TVMAZEs API was used for this website.
+
+On Simply series you can search fo a tv-show by writing it down in the search-bar. The best matches is shown, and you can choose the one you would like to know more about. After clicking on a show you get a synopsis of the series, and a summary of all the episodes in each season.
