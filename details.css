@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -17,16 +18,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80px;
     background: #ffa4f830;
     font-size: 1.2rem;
     color: rgb(249 219 255);
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
 }
 
 header h1 {
+    text-align: center;
     margin: 5px;
     font-size: 2rem;
     color: rgb(249 219 255);
@@ -44,6 +44,7 @@ header h1 {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    margin: 10px;
 }
 
 .back-btn:hover {
@@ -76,16 +77,24 @@ header h1 {
 }
 
 .summary-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    background: #1f0f227a;
+    /* display: flex;
+    flex-direction: column; */
+    /* gap: 20px; */
+    background: #1f0f227a;
+    padding: 0px 20px 20px;
+    /* align-items: center;*/
 }
 
 .summary-info p {
     line-height: 1.6;
     color: rgb(249 219 255);
-    margin-bottom: 20px;
+    padding: 5px;
 }
+
+/* p.summary {
+    margin: 0;
+} */
 
 .details-info p {
     line-height: 1.6;
@@ -119,12 +128,12 @@ header h1 {
 }*/
 
 .episodes-section {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgb(249 219 255);
+    background: #1f0f227a;
+    /* border: 2px solid rgb(249 219 255); */
     border-radius: 15px;
     padding: 30px;
     margin: 0 auto;
-    width: 90vw;
+    width: 95vw;
     margin-bottom: 20px;
 }
 
@@ -147,7 +156,7 @@ header h1 {
 #season-select {
     padding: 10px 20px;
     font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.208);
+    background: #1f0f227a;
     color:rgb(249 219 255);
     border: 2px solid rgb(249 219 255);
     border-radius: 25px;
@@ -169,7 +178,7 @@ header h1 {
     display: flex;
     flex-direction: column; 
     gap: 20px;
-    background: rgba(255, 255, 255, 0.08);
+    background: #1f0f227a;
     border: 2px solid rgb(249 219 255);
     border-radius: 10px;
     padding: 20px;
@@ -227,23 +236,38 @@ header h1 {
 
 /* Responsiv design */
 @media (min-width: 768px) {
+    header {
+        height: 80px;
+        gap: 30px;
+    }
+    
     header h1 {
-    font-size: 2.5rem;
+        font-size: 2.5rem;
     }
     
     .show-container {
-        max-width: 1200px;
+        background: #1f0f227a;
+        max-width: 1000px;
         flex-direction: row;
     }
     
     .show-container img {
-        max-width: 300px;
+        max-width: 350px;
         width: 100%;
-        height: auto;
+        height: 100%;
+        display: flex;
+        align-self: center;
+        margin: 20px 0px 20px 60px;
     }
 
     .summary-info, .details-info {
-        width: 60%;
+        width: 80%;
+    }
+
+    .summary-container {
+        align-items: center;
+        background: none;
+        padding: 20px 0px 20px;
     }
 
     .episode-card {
