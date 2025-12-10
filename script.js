@@ -7,7 +7,6 @@ function searchShow() {
     .then(data => {
         let resultsDiv = document.getElementById("results");
         
-        // Filtrera på genre och/eller land
         let filteredData = data;
         
         // Filtrera på genre om vald
@@ -23,7 +22,6 @@ function searchShow() {
             return;
         }
         
-        // Bygg HTML
         let html = "";
         filteredData.forEach(item => {
             let show = item.show;

@@ -4,7 +4,7 @@ const showId = urlParams.get('id');
 
 let allEpisodes = [];
 
-// Hämta information om serien
+// Hämta info om serien
 fetch(`https://api.tvmaze.com/shows/${showId}`)
 .then(response => response.json())
 .then(show => {

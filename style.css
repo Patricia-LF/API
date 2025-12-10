@@ -2,6 +2,10 @@
     --font: "Poppins", sans-serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,6 +17,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 header {
@@ -21,7 +26,7 @@ header {
     justify-content: center;
     height: 100px;
     background: #ffa4f830;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgb(249 219 255);
     font-family: var(--font);
 }
@@ -34,26 +39,21 @@ header h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    /* margin-top: 40px; */
     flex-direction: column;
 }
 
 .intro img {
-    /* position: relative; */
     width: 100vw;
 }
 
 .intro p {
-    /* position: absolute; */
     display: flex;
     align-self: center;
     width: 80vw;
-    /* background: rgba(0, 0, 0, 0.703); */
 }
 
 .filter-row {
     display: flex;
-    /* gap: 15px; */
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -86,9 +86,10 @@ header h1 {
     top: 20px;
     margin-bottom: 40px;
     gap: 20px;
-    /* width: 100vw; */
     justify-self: center;
     flex: 1;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 input#search {
@@ -99,7 +100,9 @@ input#search {
     color: rgb(249 219 255);
     border: rgb(249 219 255) solid;
     border-radius: 25px;
-    padding: 10px
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 80%;
 }
 
 input#search::placeholder {
@@ -132,14 +135,12 @@ div#results {
     gap: 40px;
     width: 80%;
     min-height: 100vw;
-    /* justify-content: space-evenly; */
 }
 
 .show-card a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* gap: 20px; */
     text-decoration: none;
     border: rgb(249 219 255) solid;
     padding: 40px;
@@ -158,8 +159,6 @@ h3 {
 div#results img {
     border:rgb(249 219 255) solid;
     border-radius: 25px;
-    /* box-shadow: 6px 6px 10px palevioletred;
-    color: rgb(249 219 255); */
 }
 
 div#results img:hover {
@@ -193,8 +192,6 @@ div#results img:hover {
 .no-image {
     font-family: var(--font);
     width: 100%;
-    /* max-width: 400px; */
-    /* height: 78%; */
     height: 295px;
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(249, 219, 255, 0.507);
@@ -214,14 +211,30 @@ p {
 
 footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    /* width: 100vw; */
+    text-align: center;
     background: #ffa4f830;
     font-size: 1rem;
     color: rgb(249 219 255);
     font-family: var(--font);
     margin-top: auto;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    width: 300px;
+}
+
+footer a {
+    color: rgb(249 219 255);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: palevioletred;
+    text-shadow: 0 0 10px palevioletred;
 }
 
 @media (min-width: 768px) {
@@ -234,7 +247,7 @@ footer {
     }
 
     .intro p {
-        width: 60%;
+        width: 50%;
     }
 
     .carousel {
@@ -245,12 +258,7 @@ footer {
     width: 400px;
     }
 
-    #genre-filter {
-        /* margin-top: 60px; */
-    }
-
     .search {
-        /* top: 60px; */
         padding: 0px;
         width: 100%;
     }
@@ -259,7 +267,6 @@ footer {
         position: relative;
         margin-top: 40px;
         width: 92%;
-        /* justify-content: space-evenly; */
         min-height: 0;
     }
 
