@@ -60,6 +60,7 @@ header h1 {
     margin: 40px auto;
     padding: 0 20px;
     gap: 40px;
+    border-radius: 15px;
 }
 
 .show-info {
@@ -98,7 +99,7 @@ header h1 {
     border-radius: 15px;
     padding: 30px;
     margin: 0 auto;
-    width: 95vw;
+    width: 95%;
     margin-bottom: 20px;
 }
 
@@ -261,6 +262,10 @@ footer a:hover {
         align-items: center;
         background: none;
         padding: 20px 0px 20px;
+    }
+
+    .episodes-section {
+        max-width: 1000px;
     }
 
     .episode-card {
