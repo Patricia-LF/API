@@ -2,10 +2,6 @@
     --font: "Poppins", sans-serif;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +13,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow-x: hidden;
 }
 
 header {
@@ -89,7 +84,6 @@ header h1 {
     justify-self: center;
     flex: 1;
     padding: 0 20px;
-    box-sizing: border-box;
 }
 
 input#search {
@@ -101,7 +95,6 @@ input#search {
     border: rgb(249 219 255) solid;
     border-radius: 25px;
     padding: 10px;
-    box-sizing: border-box;
     max-width: 80%;
 }
 
